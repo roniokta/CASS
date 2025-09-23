@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Christopher Abimanyu Singing Course</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    function toggleMenu() {
+      document.getElementById("mobileMenu").classList.toggle("hidden");
+    }
+  </script>
+</head>
+<body class="font-sans bg-gray-50 text-gray-800">
+
+  <!-- NAVBAR -->
+  <nav class="bg-indigo-700 text-white p-4 shadow-md fixed top-0 w-full z-50">
+    <div class="max-w-6xl mx-auto flex justify-between items-center">
+      <h1 class="text-lg md:text-xl font-bold">CA Singing Course</h1>
+      <!-- Desktop Menu -->
+      <div class="hidden md:flex space-x-6">
+        <a href="#about" class="hover:text-gray-300">Tentang</a>
+        <a href="#program" class="hover:text-gray-300">Program</a>
+        <a href="#jadwal" class="hover:text-gray-300">Jadwal</a>
+        <a href="#event" class="hover:text-gray-300">Event</a>
+        <a href="#galeri" class="hover:text-gray-300">Galeri</a>
+        <a href="#youtube" class="hover:text-gray-300">YouTube</a>
+        <a href="#daftar" class="hover:text-gray-300">Daftar</a>
+        <a href="#kontak" class="hover:text-gray-300">Contact</a>
+      </div>
+      <!-- Mobile Menu Button -->
+      <button class="md:hidden" onclick="toggleMenu()">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none"
+             viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+      </button>
+    </div>
+    <!-- Mobile Menu -->
+    <div id="mobileMenu" class="hidden md:hidden flex flex-col mt-2 space-y-2">
+      <a href="#about" class="block px-4 py-2 hover:bg-indigo-600">Tentang</a>
+      <a href="#program" class="block px-4 py-2 hover:bg-indigo-600">Program</a>
+      <a href="#jadwal" class="block px-4 py-2 hover:bg-indigo-600">Jadwal</a>
+      <a href="#event" class="block px-4 py-2 hover:bg-indigo-600">Event</a>
+      <a href="#galeri" class="block px-4 py-2 hover:bg-indigo-600">Galeri</a>
+      <a href="#youtube" class="block px-4 py-2 hover:bg-indigo-600">YouTube</a>
+      <a href="#daftar" class="block px-4 py-2 hover:bg-indigo-600">Daftar</a>
+      <a href="#kontak" class="block px-4 py-2 hover:bg-indigo-600">Contact</a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="bg-gradient-to-r from-indigo-600 to-purple-600 text-white text-center py-32 px-6 mt-14">
+    <h1 class="text-3xl md:text-5xl font-bold mb-4">Christopher Abimanyu Singing Course</h1>
+    <p class="text-base md:text-xl mb-6">Kursus vokal profesional di Bandung & online bersama penyanyi tenor Indonesia</p>
+    <a href="#daftar" class="bg-white text-indigo-700 px-5 py-3 rounded-lg font-semibold hover:bg-gray-100">
+      Daftar Sekarang
+    </a>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="py-12 px-4 md:px-6 max-w-5xl mx-auto text-center">
+    <h2 class="text-2xl md:text-3xl font-bold mb-6">Tentang Kami</h2>
+    <p>
+      Christopher Abimanyu Singing Course berlokasi di <b>Jl. Sangkuriang A3, Dago – Bandung</b>. 
+      Fokus kami adalah <b>kelas vokal</b>, dipandu langsung oleh <b>Christopher Abimanyu</b> (penyanyi tenor Indonesia) 
+      bersama tutor berpengalaman. Jadwal fleksibel Senin–Sabtu, tersedia juga <b>kelas online</b>.
+    </p>
+  </section>
+
+  <!-- PROGRAM -->
+  <section id="program" class="py-12 px-4 md:px-6 max-w-6xl mx-auto">
+    <h2 class="text-2xl md:text-3xl font-bold text-center mb-8">Program Vokal Kami</h2>
+    <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+      <div class="bg-white shadow-md rounded-xl p-6 text-center hover:shadow-lg">
+        <img src="https://img.icons8.com/color/96/microphone.png" class="mx-auto mb-4" alt="Vokal Dasar">
+        <h3 class="font-bold text-lg md:text-xl mb-2">Kelas Vokal Dasar</h3>
+        <p>Teknik pernapasan, artikulasi, dan pitch control dari nol.</p>
+      </div>
+      <div class="bg-white shadow-md rounded-xl p-6 text-center hover:shadow-lg">
+        <img src="https://img.icons8.com/color/96/microphone.png" class="mx-auto mb-4" alt="Vokal Lanjutan">
+        <h3 class="font-bold text-lg md:text-xl mb-2">Kelas Vokal Lanjutan</h3>
+        <p>Kembangkan range suara, teknik vibrato, dan ekspresi panggung.</p>
+      </div>
+      <div class="bg-white shadow-md rounded-xl p-6 text-center hover:shadow-lg">
+        <img src="https://img.icons8.com/color/96/microphone.png" class="mx-auto mb-4" alt="Masterclass">
+        <h3 class="font-bold text-lg md:text-xl mb-2">Masterclass</h3>
+        <p>Belajar langsung dari <b>Christopher Abimanyu</b> untuk teknik vokal tingkat profesional.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- JADWAL -->
+  <section id="jadwal" class="bg-gray-100 py-12 px-4 md:px-6">
+    <h2 class="text-2xl md:text-3xl font-bold text-center mb-8">Jadwal Kelas</h2>
+    <div class="max-w-4xl mx-auto grid gap-6 sm:grid-cols-2">
+      <div class="bg-white p-6 rounded-lg shadow-md">
+        <h3 class="font-bold text-lg mb-2">Senin – Rabu – Jumat</h3>
+        <p>16.00 - 18.00 WIB → Vokal Dasar</p>
+        <p>18.30 - 20.00 WIB → Vokal Lanjutan</p>
+      </div>
+      <div class="bg-white p-6 rounded-lg shadow-md">
+        <h3 class="font-bold text-lg mb-2">Selasa – Kamis – Sabtu</h3>
+        <p>16.00 - 18.00 WIB → Masterclass</p>
+        <p>Online Class tersedia → sesuai jadwal fleksibel</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- EVENT -->
+  <section id="event" class="py-12 px-4 md:px-6 bg-gradient-to-r from-yellow-100 via-white to-yellow-50">
+    <h2 class="text-2xl md:text-3xl font-bold text-center mb-8">Event & Kegiatan</h2>
+    <div id="eventList" class="max-w-5xl mx-auto space-y-6 text-center">
+      <p class="text-gray-500">Memuat data event...</p>
+    </div>
+  </section>
+
+  <!-- GALERI -->
+  <section id="galeri" class="py-12 px-4 md:px-6 max-w-6xl mx-auto">
+    <h2 class="text-2xl md:text-3xl font-bold text-center mb-8">Galeri Kegiatan</h2>
+    <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+      <img src="foto1.jpg" alt="Foto kegiatan 1" class="rounded-xl shadow-md w-full h-60 object-cover">
+      <img src="foto2.jpg" alt="Foto kegiatan 2" class="rounded-xl shadow-md w-full h-60 object-cover">
+      <img src="foto3.jpg" alt="Foto kegiatan 3" class="rounded-xl shadow-md w-full h-60 object-cover">
+    </div>
+  </section>
+
+  <!-- YOUTUBE -->
+  <section id="youtube" class="bg-gray-100 py-12 px-4 md:px-6 text-center">
+    <h2 class="text-2xl md:text-3xl font-bold mb-6">Tonton di YouTube</h2>
+    <div class="max-w-3xl mx-auto">
+      <iframe class="w-full h-60 md:h-80 rounded-xl shadow-lg"
+        src="https://www.youtube.com/embed/UC6mQ5KC1JdBWZ6tz9rGWfpQ"
+        title="YouTube video" frameborder="0" allowfullscreen>
+      </iframe>
+    </div>
+  </section>
+
+  <!-- FORM PENDAFTARAN -->
+  <section id="daftar" class="py-12 px-4 md:px-6 max-w-3xl mx-auto">
+    <h2 class="text-2xl md:text-3xl font-bold text-center mb-8">Formulir Pendaftaran</h2>
+    <form id="pendaftaranForm" class="bg-white shadow-lg rounded-xl p-6 md:p-8 space-y-6">
+      <div>
+        <label class="block mb-2 font-medium">Nama Lengkap</label>
+        <input name="nama" type="text" class="w-full border rounded-lg p-3" required>
+      </div>
+      <div>
+        <label class="block mb-2 font-medium">Email</label>
+        <input name="email" type="email" class="w-full border rounded-lg p-3" required>
+      </div>
+      <div>
+        <label class="block mb-2 font-medium">Pilih Program</label>
+        <select name="program" class="w-full border rounded-lg p-3">
+          <option>Vokal Dasar</option>
+          <option>Vokal Lanjutan</option>
+          <option>Masterclass</option>
+        </select>
+      </div>
+      <button type="submit" class="w-full bg-indigo-600 text-white py-3 rounded-lg font-semibold hover:bg-indigo-700">
+        Kirim Pendaftaran
+      </button>
+    </form>
+    <script>
+      // Script koneksi ke Google Spreadsheet
+      const scriptURL = "YOUR_GOOGLE_APPS_SCRIPT_WEB_APP_URL"; 
+      const form = document.getElementById("pendaftaranForm");
+      form.addEventListener("submit", e => {
+        e.preventDefault();
+        fetch(scriptURL, { method: "POST", body: new FormData(form)})
+          .then(response => alert("Pendaftaran berhasil!"))
+          .catch(error => alert("Error! " + error.message));
+        form.reset();
+      });
+
+      // Ambil data Event otomatis
+      google.script.run.withSuccessHandler(function(events) {
+        const container = document.getElementById("eventList");
+        container.innerHTML = ""; 
+        events.forEach(ev => {
+          const card = document.createElement("div");
+          card.className = "bg-white shadow-lg rounded-xl p-6 border-l-8 " + 
+            (ev.status === "Upcoming" ? "border-indigo-600" : "border-green-600");
+          card.innerHTML = `
+            <h3 class="text-xl md:text-2xl font-bold mb-2 ${ev.status === "Upcoming" ? "text-indigo-700" : "text-green-700"}">
+              ${ev.status === "Upcoming" ? "🎤 " : "✅ "} ${ev.judul}
+            </h3>
+            <p class="mb-2">${ev.deskripsi}</p>
+            <p class="text-sm text-gray-500">Lokasi: ${ev.lokasi} • Tanggal: ${ev.tanggal}</p>
+          `;
+          container.appendChild(card);
+        });
+      }).getEvents();
+    </script>
+  </section>
+
+  <!-- CONTACT US -->
+  <section id="kontak" class="bg-indigo-600 text-white py-12 px-4 md:px-6 text-center">
+    <h2 class="text-2xl md:text-3xl font-bold mb-6">Hubungi Kami</h2>
+    <p class="mb-4">Untuk info lebih lanjut, silakan hubungi admin kami:</p>
+    <a href="tel:+6288218359001" class="text-lg font-semibold underline hover:text-gray-200">
+      +62 882 1835 9001
+    </a>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-indigo-700 text-white text-center py-6 mt-12">
+    <p>© 2025 Christopher Abimanyu Singing Course. Semua Hak Dilindungi.</p>
+    <div class="flex justify-center gap-6 mt-4">
+      <a href="https://instagram.com/YOUR_INSTAGRAM" target="_blank">📸 Instagram</a>
+      <a href="https://youtube.com/YOUR_YOUTUBE" target="_blank">▶️ YouTube</a>
+      <a href="https://tiktok.com/@YOUR_TIKTOK" target="_blank">🎵 TikTok</a>
+    </div>
+  </footer>
+
+</body>
+</html>
