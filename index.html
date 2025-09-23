@@ -16,7 +16,7 @@
   <!-- NAVBAR -->
   <nav class="bg-indigo-700 text-white p-4 shadow-md fixed top-0 w-full z-50">
     <div class="max-w-6xl mx-auto flex justify-between items-center">
-      <h1 class="text-lg md:text-xl font-bold">CA Singing Course</h1>
+      <h1 class="text-lg md:text-xl font-bold">CA Singing School</h1>
       <!-- Desktop Menu -->
       <div class="hidden md:flex space-x-6">
         <a href="#about" class="hover:text-gray-300">Tentang</a>
@@ -161,37 +161,6 @@
         Kirim Pendaftaran
       </button>
     </form>
-    <script>
-      // Script koneksi ke Google Spreadsheet
-      const scriptURL = "https://script.google.com/macros/s/AKfycbyLFKOUi3KiDwZ_jr8IRY8egNWt-xDKnKptzpafwqXEPa780hvGMWEVal-vybCrJmiu/exec"; 
-      const form = document.getElementById("pendaftaranForm");
-      form.addEventListener("submit", e => {
-        e.preventDefault();
-        fetch(scriptURL, { method: "POST", body: new FormData(form)})
-          .then(response => alert("Pendaftaran berhasil!"))
-          .catch(error => alert("Error! " + error.message));
-        form.reset();
-      });
-
-      // Ambil data Event otomatis
-      google.script.run.withSuccessHandler(function(events) {
-        const container = document.getElementById("eventList");
-        container.innerHTML = ""; 
-        events.forEach(ev => {
-          const card = document.createElement("div");
-          card.className = "bg-white shadow-lg rounded-xl p-6 border-l-8 " + 
-            (ev.status === "Upcoming" ? "border-indigo-600" : "border-green-600");
-          card.innerHTML = `
-            <h3 class="text-xl md:text-2xl font-bold mb-2 ${ev.status === "Upcoming" ? "text-indigo-700" : "text-green-700"}">
-              ${ev.status === "Upcoming" ? "🎤 " : "✅ "} ${ev.judul}
-            </h3>
-            <p class="mb-2">${ev.deskripsi}</p>
-            <p class="text-sm text-gray-500">Lokasi: ${ev.lokasi} • Tanggal: ${ev.tanggal}</p>
-          `;
-          container.appendChild(card);
-        });
-      }).getEvents();
-    </script>
   </section>
 
   <!-- CONTACT US -->
@@ -213,9 +182,46 @@
     </div>
   </footer>
 
+  <!-- SCRIPT FETCH EVENT + FORM -->
+  <script>
+    // URL GAS Web App
+    const eventURL = "https://script.google.com/macros/s/AKfycbyLFKOUi3KiDwZ_jr8IRY8egNWt-xDKnKptzpafwqXEPa780hvGMWEVal-vybCrJmiu/exec";
+
+    // Fetch Event
+    fetch(eventURL)
+      .then(res => res.json())
+      .then(events => {
+        const container = document.getElementById("eventList");
+        container.innerHTML = "";
+        events.forEach(ev => {
+          const card = document.createElement("div");
+          card.className = "bg-white shadow-lg rounded-xl p-6 border-l-8 " +
+            (ev.status === "Upcoming" ? "border-indigo-600" : "border-green-600");
+          card.innerHTML = `
+            <h3 class="text-xl md:text-2xl font-bold mb-2 ${ev.status === "Upcoming" ? "text-indigo-700" : "text-green-700"}">
+              ${ev.status === "Upcoming" ? "🎤 " : "✅ "} ${ev.judul}
+            </h3>
+            <p class="mb-2">${ev.deskripsi}</p>
+            <p class="text-sm text-gray-500">Lokasi: ${ev.lokasi} • Tanggal: ${ev.tanggal}</p>
+          `;
+          container.appendChild(card);
+        });
+      })
+      .catch(err => {
+        document.getElementById("eventList").innerHTML = "<p class='text-red-600'>Gagal memuat event!</p>";
+        console.error(err);
+      });
+
+    // Form Pendaftaran
+    const form = document.getElementById("pendaftaranForm");
+    form.addEventListener("submit", e => {
+      e.preventDefault();
+      fetch(eventURL, { method: "POST", body: new FormData(form)})
+        .then(response => alert("Pendaftaran berhasil!"))
+        .catch(error => alert("Error! " + error.message));
+      form.reset();
+    });
+  </script>
+
 </body>
 </html>
-
-
-
-
