@@ -22,48 +22,64 @@
 </head>
 <body class="font-sans bg-gray-50 text-gray-800">
 
-  <!-- NAVBAR -->
-  <nav class="bg-indigo-700 text-white p-4 shadow-md fixed top-0 w-full z-50">
-    <div class="max-w-6xl mx-auto flex justify-between items-center">
-      <h1 class="text-lg md:text-xl font-extrabold gradient-text">CASS</h1>
-      <div class="hidden md:flex space-x-6">
-        <a href="#about" class="hover:text-gray-300">Tentang</a>
-        <a href="#program" class="hover:text-gray-300">Program</a>
-        <a href="#jadwal" class="hover:text-gray-300">Jadwal</a>
-        <a href="#event" class="hover:text-gray-300">Event</a>
-        <a href="#galeri" class="hover:text-gray-300">Galeri</a>
-        <a href="#youtube" class="hover:text-gray-300">YouTube</a>
-        <a href="#daftar" class="hover:text-gray-300">Daftar</a>
-        <a href="#kontak" class="hover:text-gray-300">Contact</a>
-      </div>
-      <button class="md:hidden" onclick="toggleMenu()">
-        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none"
-             viewBox="0 0 24 24" stroke="currentColor">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                d="M4 6h16M4 12h16M4 18h16"/>
-        </svg>
-      </button>
+<!-- NAVBAR -->
+<nav id="mainNav" class="bg-indigo-700 text-white p-4 shadow-md fixed top-0 w-full z-50">
+  <div class="max-w-6xl mx-auto flex justify-between items-center">
+    <h1 class="text-lg md:text-xl font-extrabold gradient-text">CASS</h1>
+    <div class="hidden md:flex space-x-6">
+      <a href="#about" class="hover:text-gray-300">Tentang</a>
+      <a href="#program" class="hover:text-gray-300">Program</a>
+      <a href="#jadwal" class="hover:text-gray-300">Jadwal</a>
+      <a href="#event" class="hover:text-gray-300">Event</a>
+      <a href="#galeri" class="hover:text-gray-300">Galeri</a>
+      <a href="#youtube" class="hover:text-gray-300">YouTube</a>
+      <a href="#daftar" class="hover:text-gray-300">Daftar</a>
+      <a href="#kontak" class="hover:text-gray-300">Contact</a>
     </div>
-    <div id="mobileMenu" class="hidden md:hidden flex flex-col mt-2 space-y-2">
-      <a href="#about" class="block px-4 py-2 hover:bg-indigo-600">Tentang</a>
-      <a href="#program" class="block px-4 py-2 hover:bg-indigo-600">Program</a>
-      <a href="#jadwal" class="block px-4 py-2 hover:bg-indigo-600">Jadwal</a>
-      <a href="#event" class="block px-4 py-2 hover:bg-indigo-600">Event</a>
-      <a href="#galeri" class="block px-4 py-2 hover:bg-indigo-600">Galeri</a>
-      <a href="#youtube" class="block px-4 py-2 hover:bg-indigo-600">YouTube</a>
-      <a href="#daftar" class="block px-4 py-2 hover:bg-indigo-600">Daftar</a>
-      <a href="#kontak" class="block px-4 py-2 hover:bg-indigo-600">Contact</a>
-    </div>
-  </nav>
+    <button class="md:hidden" onclick="toggleMenu()">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none"
+           viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M4 6h16M4 12h16M4 18h16"/>
+      </svg>
+    </button>
+  </div>
+  <div id="mobileMenu" class="hidden md:hidden flex flex-col mt-2 space-y-2">
+    <a href="#about" class="block px-4 py-2 hover:bg-indigo-600">Tentang</a>
+    <a href="#program" class="block px-4 py-2 hover:bg-indigo-600">Program</a>
+    <a href="#jadwal" class="block px-4 py-2 hover:bg-indigo-600">Jadwal</a>
+    <a href="#event" class="block px-4 py-2 hover:bg-indigo-600">Event</a>
+    <a href="#galeri" class="block px-4 py-2 hover:bg-indigo-600">Galeri</a>
+    <a href="#youtube" class="block px-4 py-2 hover:bg-indigo-600">YouTube</a>
+    <a href="#daftar" class="block px-4 py-2 hover:bg-indigo-600">Daftar</a>
+    <a href="#kontak" class="block px-4 py-2 hover:bg-indigo-600">Contact</a>
+  </div>
+</nav>
 
-  <!-- HERO -->
-  <section class="bg-gradient-to-r from-indigo-600 to-purple-600 text-white text-center py-32 px-6 mt-14">
-    <h1 class="text-3xl md:text-5xl font-extrabold mb-4 gradient-text">Christopher Abimanyu Singing School</h1>
-    <p class="text-base md:text-xl mb-6">Kursus vokal profesional di Bandung & online bersama penyanyi tenor Indonesia</p>
-    <a href="#daftar" class="bg-white text-indigo-700 px-5 py-3 rounded-lg font-semibold hover:bg-gray-100">
-      Daftar Sekarang
-    </a>
-  </section>
+<!-- HERO -->
+<section id="hero" class="bg-gradient-to-r from-indigo-600 to-purple-600 text-white text-center pb-32 px-6">
+  <h1 class="text-3xl md:text-5xl font-extrabold mb-4 gradient-text">Christopher Abimanyu Singing School</h1>
+  <p class="text-base md:text-xl mb-6">Kursus vokal profesional di Bandung & online bersama penyanyi tenor Indonesia</p>
+  <a href="#daftar" class="bg-white text-indigo-700 px-5 py-3 rounded-lg font-semibold hover:bg-gray-100">
+    Daftar Sekarang
+  </a>
+</section>
+
+<script>
+  function adjustHeroPadding() {
+    const nav = document.getElementById("mainNav");
+    const hero = document.getElementById("hero");
+    if (nav && hero) {
+      const navHeight = nav.offsetHeight;
+      hero.style.paddingTop = navHeight + 40 + "px"; // +40px biar ada jarak ekstra
+    }
+  }
+
+  // Jalankan saat halaman load & resize
+  window.addEventListener("load", adjustHeroPadding);
+  window.addEventListener("resize", adjustHeroPadding);
+</script>
+
 
   <!-- ABOUT -->
   <section id="about" class="py-12 px-4 md:px-6 max-w-5xl mx-auto text-center">
@@ -269,6 +285,7 @@
 
 </body>
 </html>
+
 
 
 
