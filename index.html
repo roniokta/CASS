@@ -293,7 +293,29 @@
     });
   });
 </script>
+  <script>
+  window.addEventListener("load", function () {
+    if (typeof Swiper === "undefined") {
+      console.error("Swiper JS gagal dimuat.");
+      return;
+    }
+    const swiper = new Swiper("#galeri .swiper", {
+      loop: true,
+      slidesPerView: 1,
+      spaceBetween: 16,
+      pagination: { el: "#galeri .swiper-pagination", clickable: true },
+      navigation: {
+        nextEl: "#galeri .swiper-button-next",
+        prevEl: "#galeri .swiper-button-prev"
+      },
+      keyboard: { enabled: true },
+      autoplay: { delay: 4000, disableOnInteraction: false }
+    });
+  });
+</script>
+
 
 </body>
 </html>
+
 
